@@ -3,6 +3,8 @@ body {
 	color: #ffffff;
 	background-color: #1a1a1a;
 	overflow-x: hidden;
+	font-size: 100%;
+	width: 100%;
 }
 
 #header {
@@ -19,6 +21,11 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: start;
+}
+
+.accompanying-text {
+	width: 50%;
+	text-wrap: nowrap;
 }
 
 a {
