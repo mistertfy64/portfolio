@@ -1,0 +1,49 @@
+body {
+	font-family: "JetBrains Mono", monospace;
+	color: #ffffff;
+	background-color: #1a1a1a;
+	overflow-x: hidden;
+}
+
+#header {
+	font-weight: bold;
+	margin: 4px 4px 4px 0;
+	font-size: 150%;
+}
+
+.text--small {
+	font-size: 80%;
+}
+
+.entry {
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+}
+
+a {
+	color: #ffffff !important;
+}
+
+.certificate {
+	width: 25%;
+	height: auto;
+	padding: 0 8px;
+}
+.text--name {
+	font-size: 125%;
+	margin: 0;
+	padding: 0 4px;
+}
+
+.text--description {
+	font-size: 110%;
+	margin: 0;
+	padding: 0 4px;
+}
+
+.text--comment {
+	font-size: 80%;
+	margin: 0;
+	padding: 0 4px;
+}
