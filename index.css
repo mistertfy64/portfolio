@@ -8,9 +8,9 @@ body {
 }
 
 #certificates {
-  display:flex;
-  flex-wrap: wrap;
-  text-align:center;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
 }
 
 #header {
@@ -24,9 +24,9 @@ body {
 }
 
 .entry {
-  max-width: 480px;
+	max-width: 432px;
 	text-align: center;
-  padding: 8px;
+	padding: 8px;
 }
 
 a {
@@ -57,7 +57,7 @@ a {
 }
 
 .link--image {
-  width: fit-content;
-  height: fit-content;
-  text-decoration: none;
+	width: fit-content;
+	height: fit-content;
+	text-decoration: none;
 }
