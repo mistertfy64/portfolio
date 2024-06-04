@@ -1,7 +1,7 @@
 :root {
-	--color-primary-accent: #ff0f0f;
-	--color-secondary-accent: #ff8800;
-	--color-tertiary-accent: #ffee00;
+	--color-primary-accent: #ce2727;
+	--color-secondary-accent: #e28112;
+	--color-tertiary-accent: #ecd714;
 }
 
 body {
@@ -18,7 +18,7 @@ code {
 }
 
 header {
-	width: calc(100vw - 16px);
+	width: calc(100vw - 48px);
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -35,11 +35,11 @@ header {
 	font-size: 300%;
 	font-weight: normal;
 	font-style: italic;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-color: #ffffff;
-	text-shadow: 2px 2px 2px #eeeeee;
+	/* background-clip: text; */
+	/* -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	color: #ffffff;
+	/* text-shadow: 2px 2px 2px #eeeeee; */
 }
 
 .no-select {
@@ -70,10 +70,21 @@ header {
 	color: var(--color-tertiary-accent);
 }
 
-.entry {
-	border: 2px solid #ffffff;
-	border-radius: 4px;
-	width: 480px;
+.entries {
+	width: calc(100vw - 16px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.entry__body {
+	width: 100%;
+	display: flex;
+}
+
+.entry__description {
+	width: 70%;
+	margin: 0px 4px;
 }
 
 .entry__id {
@@ -92,6 +103,43 @@ header {
 	justify-content: space-between;
 }
 
+.entry__title span {
+	margin-left: 4px;
+}
+
+.entry {
+	border: 2px solid #ffffff;
+	border-radius: 4px;
+	width: 480px;
+	margin: 4px;
+}
+
+a {
+	text-decoration: underline;
+	color: inherit;
+}
+
+/* SMALLER SCREENS */
+@media only screen and (max-width: 768px) {
+	header {
+		flex-direction: column;
+	}
+
+	.mistertfy64 {
+		width: 80vw;
+	}
+
+	.metadata {
+		width: 100%;
+	}
+
+	.entries {
+		width: calc(100vw - 32px);
+	}
+}
+
+/* BASE COLOR */
+
 .entry__level {
 	background-color: #ffffff;
 	color: #000000;
@@ -104,10 +152,6 @@ header {
 	color: #000000;
 	width: 100%;
 	font-size: 200%;
-}
-
-.entry__title span {
-	margin-left: 4px;
 }
 
 .entry__image {
@@ -125,23 +169,150 @@ header {
 	border-radius: 4px;
 }
 
-.entry__body {
-	width: 100%;
-	display: flex;
-}
-
-.entry__description {
-	width: 70%;
-	margin-left: 4px;
-}
-
 .entry__information {
 	width: 30%;
 	margin-right: 4px;
 	text-align: right;
-	border-left: 2px solid #ffffff;
+	/*
+border-left: 2px solid #ffffff;
+	border-bottom
+: 2px solid #ffffff;*/
 }
 
-.entries {
-	width: calc(100vw - 16px);
+/* PRIMARY ACCENT COLOR */
+
+.entry.entry--primary-accent .entry__level {
+	background-color: var(--color-primary-accent);
+	color: #000000;
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.entry.entry--primary-accent .entry__title {
+	background-color: var(--color-primary-accent);
+	color: #000000;
+	width: 100%;
+	font-size: 200%;
+}
+
+.entry.entry--primary-accent .entry__image {
+	height: 256px;
+	background-color: var(--color-primary-accent);
+	padding: 8px 0px 16px 0px;
+	text-align: center;
+}
+
+.entry.entry--primary-accent .entry__image img {
+	height: 100%;
+	width: auto;
+	background-color: var(--color-primary-accent);
+	border: 2px solid #000000;
+	border-radius: 4px;
+}
+
+.entry.entry--primary-accent .entry__information {
+	width: 30%;
+	margin-right: 4px;
+	text-align: right;
+	/*
+border-left: 2px solid var(--color-primary-accent);
+	border-bottom
+: 2px solid var(--color-primary-accent);*/
+}
+
+.entry.entry--primary-accent {
+	color: var(--color-primary-accent);
+	border-color: var(--color-primary-accent);
+}
+
+/* SECONDARY ACCENT COLOR */
+
+.entry.entry--secondary-accent .entry__level {
+	background-color: var(--color-secondary-accent);
+	color: #000000;
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.entry.entry--secondary-accent .entry__title {
+	background-color: var(--color-secondary-accent);
+	color: #000000;
+	width: 100%;
+	font-size: 200%;
+}
+
+.entry.entry--secondary-accent .entry__image {
+	height: 256px;
+	background-color: var(--color-secondary-accent);
+	padding: 8px 0px 16px 0px;
+	text-align: center;
+}
+
+.entry.entry--secondary-accent .entry__image img {
+	height: 100%;
+	width: auto;
+	background-color: var(--color-secondary-accent);
+	border: 2px solid #000000;
+	border-radius: 4px;
+}
+
+.entry.entry--secondary-accent .entry__information {
+	width: 30%;
+	margin-right: 4px;
+	text-align: right;
+	/*
+border-left: 2px solid var(--color-secondary-accent);
+	border-bottom
+: 2px solid var(--color-secondary-accent);*/
+}
+
+.entry.entry--secondary-accent {
+	color: var(--color-secondary-accent);
+	border-color: var(--color-secondary-accent);
+}
+
+/* TERTIARY ACCENT COLOR */
+
+.entry.entry--tertiary-accent .entry__level {
+	background-color: var(--color-tertiary-accent);
+	color: #000000;
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.entry.entry--tertiary-accent .entry__title {
+	background-color: var(--color-tertiary-accent);
+	color: #000000;
+	width: 100%;
+	font-size: 200%;
+}
+
+.entry.entry--tertiary-accent .entry__image {
+	height: 256px;
+	background-color: var(--color-tertiary-accent);
+	padding: 8px 0px 16px 0px;
+	text-align: center;
+}
+
+.entry.entry--tertiary-accent .entry__image img {
+	height: 100%;
+	width: auto;
+	background-color: var(--color-tertiary-accent);
+	border: 2px solid #000000;
+	border-radius: 4px;
+}
+
+.entry.entry--tertiary-accent .entry__information {
+	width: 30%;
+	margin-right: 4px;
+	text-align: right;
+	/*
+border-left: 2px solid var(--color-tertiary-accent);
+	border-bottom
+: 2px solid var(--color-tertiary-accent);*/
+}
+
+.entry.entry--tertiary-accent {
+	color: var(--color-tertiary-accent);
+	border-color: var(--color-tertiary-accent);
 }
