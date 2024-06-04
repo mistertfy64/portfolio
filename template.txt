@@ -1,0 +1,27 @@
+<br>
+    <!-- Entry -->
+    <div class="entry entry--tertiary-accent" id="hi">
+      <div class="entry__header">
+        <span class="entry__level"><code>MINI</code></span>
+        <span class="entry__id"><code>#2023thctt</code></span>
+      </div>
+      <div class="entry__main">
+        <div class="entry__title">
+          <span>001</span>
+        </div>
+        <div class="entry__image">
+          <a class="link--image" href="./images/2023-09-30-thctt2023junior.jpg">
+            <img src="./images/2023-09-30-thctt2023junior.jpg">
+          </a>
+        </div>
+      </div>
+      <div class="entry__body">
+        <div class="entry__description">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, amet cumque nobis voluptatibus error velit, aut atque exercitationem possimus nam quod quidem quaerat ratione eos, a iste sit vitae architecto.</p>
+        </div>
+        <div class="entry__information">
+          <p>1<br>2<br>3</p>
+        </div>
+      </div>
+    </div>
+    <!-- Entry End -->
