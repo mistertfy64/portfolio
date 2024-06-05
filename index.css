@@ -114,6 +114,10 @@ header {
 	margin: 4px;
 }
 
+.entry__main {
+	background-color: #ffffff;
+}
+
 a {
 	text-decoration: underline;
 	color: inherit;
@@ -123,6 +127,12 @@ a {
 @media only screen and (max-width: 768px) {
 	header {
 		flex-direction: column;
+		width: 100%;
+	}
+
+	.subtitle {
+		width: 100%;
+		font-size: 12.5vw;
 	}
 
 	.mistertfy64 {
@@ -130,11 +140,40 @@ a {
 	}
 
 	.metadata {
-		width: 100%;
+		width: calc(100% - 24px);
 	}
 
 	.entries {
-		width: calc(100vw - 32px);
+		width: 95%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.entry {
+		width: min(100%, 480px);
+	}
+
+	.entry__image {
+		height: auto !important;
+		width: 100% !important;
+		text-align: center;
+	}
+
+	.entry__image img {
+		width: calc(100% - 8px) !important;
+		height: auto !important;
+	}
+
+	.entry__body {
+		flex-direction: column;
+	}
+
+	.entry__description {
+		width: calc(100% - 8px) !important;
+	}
+
+	.entry__information {
+		width: calc(100% - 8px) !important;
 	}
 }
 
@@ -162,8 +201,8 @@ a {
 }
 
 .entry__image img {
-	height: 100%;
-	width: auto;
+	height: auto;
+	width: 100%;
 	background-color: #ffffff;
 	border: 2px solid #000000;
 	border-radius: 4px;
@@ -225,6 +264,10 @@ border-left: 2px solid var(--color-primary-accent);
 	border-color: var(--color-primary-accent);
 }
 
+.entry.entry--primary-accent .entry__main {
+	background-color: var(--color-primary-accent);
+}
+
 /* SECONDARY ACCENT COLOR */
 
 .entry.entry--secondary-accent .entry__level {
@@ -271,6 +314,10 @@ border-left: 2px solid var(--color-secondary-accent);
 	border-color: var(--color-secondary-accent);
 }
 
+.entry.entry--secondary-accent .entry__main {
+	background-color: var(--color-secondary-accent);
+}
+
 /* TERTIARY ACCENT COLOR */
 
 .entry.entry--tertiary-accent .entry__level {
@@ -315,4 +362,8 @@ border-left: 2px solid var(--color-tertiary-accent);
 .entry.entry--tertiary-accent {
 	color: var(--color-tertiary-accent);
 	border-color: var(--color-tertiary-accent);
+}
+
+.entry.entry--tertiary-accent .entry__main {
+	background-color: var(--color-tertiary-accent);
 }
